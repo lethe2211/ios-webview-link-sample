@@ -41,6 +41,7 @@ struct ContentView: View {
                             .padding(.trailing, 6)
                         }
                     }
+                    .accessibilityIdentifier("searchbar") // Set the accessibility ID for Appium to pick up the UI element
                 }
                 .padding(.horizontal)
 
@@ -57,6 +58,7 @@ struct ContentView: View {
                             }
                         }
                     }
+                    .accessibilityIdentifier("link_text")
 
                 if hasError {
                     Text("It couldn't open the URL. Please try it again.")
@@ -64,7 +66,7 @@ struct ContentView: View {
 
                 Spacer()
             }
-            .navigationTitle("WebView link sample")
+            .navigationTitle("WebViewLink Sample")
         }
     }
 }
